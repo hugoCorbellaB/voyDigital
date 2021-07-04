@@ -1,0 +1,89 @@
+@keyframes aperturaSuperior {
+    0% {
+        transform: translateY(-5px)
+        rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}
+
+@keyframes aperturaMedia {
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes aperturaInferior {
+    0% {
+        transform: translateY(5px)
+        rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}
+
+
+
+@keyframes cierreSuperior {
+    0% {
+        transform: translateY(-5px)
+        rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}
+
+@keyframes cierreMedio {
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes cierreInferior {
+    0% {
+        transform: translateY(5px)
+        rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}

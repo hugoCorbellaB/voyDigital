@@ -1,0 +1,77 @@
+@media screen and (max-width: 1024px) {
+    .cabeceraPrincipal {
+        .logo {
+            grid-column-start: 4;
+            grid-column-end: 6;
+        }
+        .iconoMenu {
+            display: flex;
+            align-items: center;
+            grid-column-start: 8;
+            grid-column-end: 9;
+            
+            &__linea {
+                animation: cierreMedio 0.8s backwards;
+                animation-direction: reverse;
+
+                &::before {
+                    animation: cierreSuperior 0.8s backwards;
+                    animation-direction: reverse;
+                }
+
+                &::after {
+                    animation: cierreInferior 0.8s backwards;
+                    animation-direction: reverse;
+                }
+            }
+        }
+
+        .enlacesDeNavegacion {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-size: 2rem;
+            background-color: var(--colorPrimario);
+            grid-column-start: 1;
+            grid-column-end: 9;
+            transition: 
+                opacity 0.8s 0.5s,
+                clip-path 1s 0.5s;
+            clip-path: circle(200px at top right);
+
+            .enlaceDeNavegacion {
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        .botonMenu:checked ~ .enlacesDeNavegacion {
+            opacity: 1;
+            clip-path: circle(100% at center);
+        }
+
+        .botonMenu:checked ~ .iconoMenu {
+            .iconoMenu__linea {
+                background-color: white;
+                animation: aperturaMedia 0.8s forwards;
+
+                &::before {
+                    background-color: white;
+                    animation: aperturaSuperior 0.8s forwards;
+                }
+
+                &::after {
+                    background-color: white;
+                    animation: aperturaInferior 0.8s forwards;
+                }
+            }
+        }
+    }
+}

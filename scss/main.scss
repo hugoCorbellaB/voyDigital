@@ -1,0 +1,47 @@
+//FUENTES
+@font-face {
+    font-family: gothamBlack;
+    src: url(../fuentes/gothamBlack.otf);
+}
+
+@font-face {
+    font-family: gothamLight;
+    src: url(../fuentes/gothamLight.otf);
+}
+
+//IMPORTACIONES
+@import 'cabeceraPrincipal';
+@import 'diseñoResponsivo';
+@import 'animaciones';
+
+//ESTILOS PRINCIPALES
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --colorPrimario: #F4364C;
+    --colorSecundario: #041E42;
+}
+
+section {
+    height: 100vh;
+}
+
+.inicio {
+    background-color: red;
+}
+
+.servicios {
+    background-color: green;
+}
+
+.nosotros {
+    background-color: yellow;
+}
+
+.contacto {
+    background-color: blue;
+}

@@ -1,0 +1,96 @@
+.cabeceraPrincipal {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 75px;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    align-items: center;
+
+    .logo {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 75px;
+
+            img {
+                height: 70%;
+            }
+        }
+    }
+
+    .enlacesDeNavegacion {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .enlaceDeNavegacion {
+            list-style: none;
+
+            a {
+                color: var(--colorPrimario);
+                font-family: gothamBlack;
+                text-decoration: none;
+                transition: 0.5s;
+            }
+        }
+
+        .seccionVisualizada {
+            padding: 2vh;
+            background-color: var(--colorSecundario);
+            color: white !important;
+        }
+    }
+
+    .iconoMenu{ 
+        position: relative;
+        padding: 26px 10px;
+        cursor: pointer;
+        z-index: 1;
+        display: none;
+
+        &__linea {
+            display: block;
+            position: relative;
+            background-color: var(--colorPrimario);
+            height: 2px;
+            width: 20px;
+            border-radius: 4px;
+            transition: background 0.8s ease;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+                background-color: var(--colorPrimario);
+                transition: background 0.8s ease;
+            }
+
+            &::before {
+                transform: translateY(-5px);
+            }
+
+            &::after {
+                transform: translateY(5px);
+            }
+        }
+    }
+
+    .botonMenu {
+        display: none;
+    }
+}
